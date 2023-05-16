@@ -3,10 +3,10 @@
 const env = process.env.NODE_ENV;
 const isInDevelopment = env === "development";
 
-const repo = isInDevelopment ? "" : "fabiundfabi";
+const repo = "";
 
-const assetPrefix = isInDevelopment ? "" : `/${repo}`;
-const basePath = isInDevelopment ? "" : `/${repo}`;
+const assetPrefix = repo;
+const basePath = repo;
 
 const nextConfig = {
   assetPrefix: assetPrefix,
