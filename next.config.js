@@ -1,14 +1,18 @@
 /** @type {import('next').NextConfig} */
 
-const repo = 'fabiundfabi'
-const assetPrefix = `/${repo}`
-const basePath = `/${repo}`
+const env = process.env.NODE_ENV;
+const isInDevelopment = env === "development";
+
+const repo = isInDevelopment ? "" : "fabiundfabi";
+
+const assetPrefix = isInDevelopment ? "" : `/${repo}`;
+const basePath = isInDevelopment ? "" : `/${repo}`;
 
 const nextConfig = {
   assetPrefix: assetPrefix,
   basePath: basePath,
-  output: 'export',
-  distDir: 'docs',
-}
+  output: "export",
+  distDir: "docs",
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
