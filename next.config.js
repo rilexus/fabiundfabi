@@ -5,7 +5,7 @@ const assetPrefix = `/${repo}/`
 const basePath = `/${repo}`
 
 const nextConfig = {
-  assetPrefix: assetPrefix,
+  assetPrefix: 'https://rilexus.github.io/fabiundfabi/',
   basePath: basePath,
   output: 'export',
   distDir: 'docs',
